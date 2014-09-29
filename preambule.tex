@@ -1,0 +1,36 @@
+%%% Langage et accents
+	\usepackage[french]{babel} % Langue française
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage{gentium}
+
+%%% Packages
+	\usepackage{fullpage,xcolor,graphicx}
+	\usepackage{url}
+	\usepackage{upgreek}
+	\usepackage{lettrine}
+	\usepackage{array}
+	\usepackage[hidelinks]{hyperref}
+
+%%% Couleur principale
+	\definecolor{main}{HTML}{7E9AB7}%4A7FB7
+	
+%%% Géométrie
+	%\usepackage[a4paper,margin=2cm,top=1.6cm]{geometry}
+	\usepackage[a4paper,bottom=2.5cm]{geometry}
+	\setlength{\columnsep}{15mm}
+
+%%% Format des différents titres
+	\usepackage{titlesec}
+	\titleformat{\section}{\normalfont\LARGE\nobreak}{\thesection}{1em}{}
+	\titleformat{\subsection}{\color{main!90!black}\normalfont\Large\nobreak}{\thesubsection}{1em}{}
+	\titleformat{\subsubsection}{\color{main}\normalfont\nobreak}{\thesubsubsection}{1em}{}
+
+%%% Cadres colorés
+	\usepackage[many]{tcolorbox}
+	\tcbset{skin=enhanced,boxrule=0.3pt,arc=2pt,lifted shadow={0.5mm}{-0.5mm}{1mm}{0.1mm}{black},enlarge top by=1mm,enlarge bottom by=1mm,colback=main!10!white,colframe=main}
+	% Attention, les ombres nécéssitent la version 2014 de TeXLive !
+
+%%% Commandes personalisées
+	\newcommand{\gr}[1]{{\color{main}{#1}}}
+	\newcommand{\cadre}[1]{\begin{tcolorbox}#1\end{tcolorbox}}
